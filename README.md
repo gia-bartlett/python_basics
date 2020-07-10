@@ -1,4 +1,4 @@
-PYTHON BASICS:  
+#PYTHON BASICS:  
 https://www.sololearn.com/Play/Python  
 
 
@@ -20,7 +20,7 @@ print(x % y) # find the remainder
 ```
 Docstrings (documentation strings) serve a similar purpose to comments, as they are designed to explain code.   However, they are more specific and have a different syntax.  They are created by putting a multiline string containing an explanation of the function below the function's first line.  
 ```python
-ef shout(word):
+def shout(word):
   """
   Print a word with an
   exclamation mark following it.
@@ -31,6 +31,7 @@ shout("halp")
 # prints halp!
 ```
 
+###Data Types:
 - strings are used for simple text (str) (putting numbers in quotes will make them str)
 - integers are whole numbers (int)
 - floats are decimal numbers (float)
@@ -69,7 +70,40 @@ print("Hello" + "World") # HelloWorld
 print("Hello" + ", " + "World" + "!") # Hello, World!
 ```
 
-VARIABLES:  
+##STRINGS:  
+```python
+txt = "Hello World!"
+x = txt[0] # H
+y = txt[2:5] # llo
+z = txt.strip() # remove any whitespace at beginning or end
+t = txt.upper() # convert to UPPERCASE
+t = txt.lower() # convert to lowercase
+u = txt.replace("H", "J") # Replace the character H with a J
+```
+###NONE:  
+The None object is used to represent the absence of a value.  
+It is similar to null in other programming languages.  
+Like other "empty" values, such as 0, [] and the empty string, it is False when converted to a Boolean variable.
+When entered at the Python console, it is displayed as the empty string.  
+The None object is returned by any function that doesn't explicitly return anything else.  
+
+ ```python
+None == None
+True
+>>None
+>>print(None)
+# None
+
+def some_func():
+  print("Hi!")
+# Hi!
+
+var = some_func()
+print(var)
+# None
+```
+
+###VARIABLES:  
 A variable allows you to store a value by assigning it to a name, which can be used to refer to the value later in the program.  
 Variables can use letter, numbers, and underscores but they cannot start with numbers 
 
@@ -83,10 +117,10 @@ num3 = input("Enter a number: ") # create a variable with user input
 7 > 5 # True
 ```
 
-STATEMENTS:
+##STATEMENTS:
 Python uses indentation (white space at the beginning of a line) to delimit blocks of code. In Python indentation is mandatory; programs won't work without it.  
 
-IF:  
+###IF:  
 You can use if statements to run code if a certain condition holds.  
 If an expression evaluates to True, some statements are carried out.  Otherwise, they aren't carried out.
 
@@ -107,7 +141,7 @@ if num > 5:
 # Bigger than 5
 # Between 5 and 7
 ```
-ELSE:  
+###ELSE:  
 An else statement follows an if statement, and contains code that is called when the if statement evaluates to False.  
 ```python
 x = 4
@@ -132,14 +166,14 @@ else:
       print("Number isn't 5, 11 or 7")
 # Number is 7
 ```
-BOOLEAN LOGIC:  
+###BOOLEAN LOGIC:  
 Boolean logic is used to make more complicated conditions for if statements that rely on more than one condition.  
 Python's Boolean operators are and, or, and not.  
-AND  
+####AND  
 The and operator takes two arguments, and evaluates as True if, and only if, both of its arguments are True. Otherwise, it evaluates to False.  
-OR   
+####OR   
 The or operator also takes two arguments. It evaluates to True if either (or both) of its arguments are True, and False if both arguments are False.  
-NOT  
+####NOT  
 Unlike other operators we've seen so far, not only takes one argument, and inverts it.
 The result of not True is False, and not False goes to True.
 ```python
@@ -157,7 +191,7 @@ It is an extension of the mathematical idea of order of operations (multiplicati
 
 <img src="https://api.sololearn.com/DownloadFile?id=3515">  
 
-WHILE LOOPS:  
+###WHILE LOOPS:  
 An if statement is run once if its condition evaluates to True, and never if it evaluates to False.  
 A while statement is similar, except that it can be run more than once.  
 The statements inside it are repeatedly executed, as long as the condition holds.  
@@ -186,7 +220,7 @@ while 1==1:
 You can stop the program's execution by using the Ctrl-C shortcut or by closing the program.  
 To end a while loop prematurely, the break statement can be used.  
 When encountered inside a loop, the break statement causes the loop to finish immediately.  
-BREAK:  
+####BREAK:  
 Using the break statement outside of a loop causes an error.  
 ```python
 i = 0
@@ -207,7 +241,7 @@ print("Finished")
 Breaking  
 Finished  
 
-CONTINUE:  
+####CONTINUE:  
 Another statement that can be used within loops is continue.  
 Unlike break, continue jumps back to the top of the loop, rather than stopping it.  
 Basically, the continue statement stops the current iteration and continues with the next one.  
@@ -233,7 +267,7 @@ Skipping 2
 Breaking  
 Finished  
 
-LISTS:  
+###LISTS:  
 Lists are another type of object in Python.  
 They are used to store an indexed list of items.  
 A list is created using square brackets with commas separating items.  
@@ -244,10 +278,10 @@ words = ["Hello", "world", "!"]
 print(words[0])
 print(words[1])
 print(words[2])
+# Hello
+# world
+# !
 ```
-Hello  
-world  
-!  
 
 An empty list is created with an empty pair of square brackets. []  
 Most of the time, a comma won't follow the last item in a list.  
@@ -260,10 +294,11 @@ things = ["string", 0, [1, 2, number], 4.56]
 print(things[1])
 print(things[2])
 print(things[2][2])
+# 0  
+# [1, 2, 3]  
+# 3  
 ```
-0  
-[1, 2, 3]  
-3  
+
 Lists of lists are often used to represent 2D grids, as Python lacks the multidimensional arrays that would be used for this in other languages.  
 
 Indexing out of the bounds of possible list values causes an IndexError.  
@@ -273,8 +308,8 @@ For other types, such as integers, indexing them isn't possible, and it causes a
 ```python
 str = "Hello world!"
 print(str[6])
+# w
 ```
-w  
 
 The item at a certain index in a list can be reassigned.  
 
@@ -282,8 +317,8 @@ The item at a certain index in a list can be reassigned.
 nums = [7, 7, 7, 7, 7]
 nums[2] = 5
 print(nums)
+# [7, 7, 5, 7, 7] 
 ```
-[7, 7, 5, 7, 7]   
 
 Lists can be added and multiplied in the same way as strings.  
 Lists and strings are similar in many ways - strings can be thought of as lists of characters that can't be changed.  
@@ -292,9 +327,9 @@ Lists and strings are similar in many ways - strings can be thought of as lists 
 nums = [1, 2, 3]
 print(nums + [4, 5, 6])
 print(nums * 3)
+# [1, 2, 3, 4, 5, 6]  
+# [1, 2, 3, 1, 2, 3, 1, 2, 3]  
 ```
-[1, 2, 3, 4, 5, 6]  
-[1, 2, 3, 1, 2, 3, 1, 2, 3]  
 
 To check if an item is in a list, the in operator can be used.  
 It returns True if the item occurs one or more times in the list, and False if it doesn't.  
@@ -305,10 +340,10 @@ words = ["bacon", "egg", "beans", "sausage"]
 print("bacon" in words)
 print("egg" in words)
 print("tomato" in words)
+# True
+# False
+# True
 ```
-True  
-True  
-False  
 
 To check if an item is not in a list, you can use the not operator in one of the following ways:  
 
@@ -331,8 +366,19 @@ This adds an item to the end of an existing list.
 nums = [1, 2, 3]
 nums.append(4)
 print(nums)
+# [1, 2, 3, 4]  
+
 ```
-[1, 2, 3, 4]  
+The insert method is similar to append, except that it allows you to insert a new item at any position in the list, as opposed to just at the end.  
+
+```python
+words = ["Python", "fun"]
+index = 1
+words.insert(index, "is")
+print(words)
+# ['Python', 'is', 'fun']  
+
+```
 
 To get the number of items in a list, you can use the len function.  
 Unlike append, len is a normal function, rather than a method.  
@@ -341,18 +387,16 @@ This means it is written before the list it is being called on, without a dot.
 ```python
 nums = [1, 3, 5, 2, 4]
 print(len(nums))
+# 5
 ```
-5  
 
-The insert method is similar to append, except that it allows you to insert a new item at any position in the list, as opposed to just at the end.  
-
+To change the value of an entry in the list you need to provide the position of the current value and the new value.  
 ```python
-words = ["Python", "fun"]
-index = 1
-words.insert(index, "is")
-print(words)
+fruits = ["apple", "banana", "cherry"]
+fruits[0] = "kiwi"
+print(fruits)
+# ["kiwi", "banana", "cherry"]
 ```
-['Python', 'is', 'fun']  
 
 The index method finds the first occurrence of a list item and returns its index.  
 If the item isn't in the list, it raises a ValueError.  
@@ -373,6 +417,9 @@ min(list): Returns the list item with minimum value
 list.count(obj): Returns a count of how many times an item occurs in a list  
 list.remove(obj): Removes an object from a list  
 list.reverse(): Reverses objects in a list  
+list.append(): Adds and item ot the end of a list  
+list.insert(): Inserts an item in chosen position in a list  
+
 
 The range function creates a sequential list of numbers.  
 The code below generates a list containing all of the integers, up to 10.  
@@ -430,7 +477,73 @@ print(list[list[4]])
 4  
 8 (this one takes the inside answer and the index for the first list)  
 
-FOR LOOPS:  
+###SLICING:  
+List slices provide a more advanced way of retrieving values from a list.  
+Basic list slicing involves indexing a list with two colon-separated integers.  
+This returns a new list containing all the values in the old list between the indices.  
+Slicing can also be done on tuples.
+
+```python
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[2:6])
+print(squares[3:8])
+print(squares[0:1])
+```
+[4, 9, 16, 25]  
+[9, 16, 25, 36, 49]  
+[0]  
+
+Like the arguments to range, the first index provided in a slice is included in the result, but the second isn't.  
+If the first number in a slice is omitted, it is taken to be the start of the list.  
+If the second number is omitted, it is taken to be the end.  
+```python
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[:7])
+print(squares[7:])
+```
+[0, 1, 4, 9, 16, 25, 36]  
+[49, 64, 81]  
+
+List slices can also have a third number, representing the step, to include only alternate values in the slice.  
+```python
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[::2])
+print(squares[2:8:3])
+```
+[2:8:3] will include elements starting from the 2nd index up to the 8th with a step of 3.  
+[0, 4, 16, 36, 64]  
+[4, 25]  
+Negative values can be used in list slicing (and normal list indexing).  
+When negative values are used for the first and second values in a slice (or a normal index), they count from the end of the list.  
+```python
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[1:-1])
+```
+If a negative value is used for the step, the slice is done backwards.  
+Using [::-1] as a slice is a common and idiomatic way to reverse a list.  
+[1, 4, 9, 16, 25, 36, 49, 64]  
+print(list[starting point: end point: step])  
+
+####LIST COMPREHENSIONS:  
+List comprehensions are a useful way of quickly creating lists whose contents obey a simple rule.  
+```python
+# a list comprehension
+cubes = [i**3 for i in range(5)]
+
+print(cubes)
+# [0, 1, 8, 27, 64]
+```
+A list comprehension can also contain an if statement to enforce a condition on values in the list.  
+```python
+evens=[i**2 for i in range(10) if i**2 % 2 == 0]
+
+print(evens)
+# [0, 4, 16, 36, 64]
+```
+Trying to create a list in a very extensive range will result in a MemoryError.  
+This issue can be solved by generators.  
+
+###FOR LOOPS:  
 Iterating through a list using a while loop requires quite a lot of code, so Python provides the for loop as a shortcut that accomplishes the same thing.  
 
 ```python
@@ -457,7 +570,118 @@ hello!
 hello!  
 hello!  
 
-FUNCTIONS:  
+###DICTIONARIES:  
+Dictionaries are data structures used to map arbitrary keys to values.  
+Lists can be thought of as dictionaries with integer keys within a certain range.  
+Dictionaries can be indexed in the same way as lists, using square brackets containing keys.  
+Each element in a dictionary is represented by a key:value pair.  
+Dictionaries are structured as follows --> name = {key:value, key:value}  
+An empty dictionary is defined as {}.  
+  
+```python
+ages = {"Dave": 24, "Mary": 42, "John": 58}
+print(ages["Dave"])
+print(ages["Mary"])
+```
+24  
+42
+
+```python
+primary = {
+  "red": [255, 0, 0], 
+  "green": [0, 255, 0], 
+  "blue": [0, 0, 255], 
+}
+
+print(primary["red"])
+print(primary["yellow"])
+```
+[255, 0, 0]
+
+KeyError: 'yellow
+
+Only immutable objects can be used as keys to dictionaries.  
+Immutable objects are those that can't be changed.  
+So far, the only mutable objects you've come across are lists and dictionaries.  
+```python
+bad_dict = {
+  [1, 2, 3]: "one two three", 
+}
+```
+TypeError: unhashable type: 'list'  
+
+Just like lists, dictionary keys can be assigned to different values.  
+However, unlike lists, a new dictionary key can also be assigned a value, not just ones that already exist.  
+
+```python
+squares = {1: 1, 2: 4, 3: "error", 4: 16,}
+squares[8] = 64
+squares[3] = 9
+print(squares)
+# {1: 1, 2: 4, 3: 9, 4: 16, 8: 64}
+```
+To determine whether a key is in a dictionary, you can use in and not in, just as you can for a list.  
+
+```python
+nums = {
+  1: "one",
+  2: "two",
+  3: "three",
+}
+print(1 in nums)
+print("three" in nums)
+print(4 not in nums)
+```
+True  
+False  
+True  
+
+####GET:  
+A useful dictionary method is get. It does the same thing as indexing,  
+but if the key is not found in the dictionary it returns another specified value instead ('None', by default).  
+
+```python
+pairs = {1: "apple",
+  "orange": [2, 3, 4], 
+  True: False, 
+  None: "True",
+}
+
+print(pairs.get("orange"))
+print(pairs.get(7))
+print(pairs.get(12345, "not in dictionary"))
+```
+[2, 3, 4]  
+None  
+not in dictionary  
+
+###TUPLES:  
+Tuples are very similar to lists, except that they are immutable (they cannot be changed).  
+Also, they are created using parentheses, rather than square brackets.  
+You can access the values in the tuple with their index, just as you can with lists;  
+Trying to reassign a value in a tuple causes a TypeError.  
+Like lists and dictionaries, tuples can be nested within each other.  
+
+```python
+words = ("bacon", "eggs", "sausages",)
+print(words[0])
+words[1] = "cheese"
+# TypeError: 'tuple' object does not support item assignment
+```
+
+Tuples can be created without the parentheses, by just separating the values with commas.  
+An empty tuple is created using an empty parenthesis pair.  
+Tuples are faster than lists, but they cannot be changed.  
+
+
+| Type       | Mutable? | Format                | Brackets |
+| :--------: | :------: | :-------------------: | :------: |
+| List       | Yes      | name = [list1, list2] | []       |
+| Dictionary | No       | name = {key : value}  | {}       |
+| Tuple      | No       | name = (1, 2, 3, 4)   | ()       |
+| Set        |         |                      |            |
+ 
+###FUNCTIONS:  
 Code reuse is a very important part of programming in any language.  
 Increasing code size makes it harder to maintain.  
 For a large programming project to be successful, it is essential to abide by the Don't Repeat Yourself, or DRY, principle.  
@@ -612,7 +836,33 @@ Some of the standard library's useful modules include string, re, datetime, math
 
 Tasks that can be done by the standard library include string parsing, data serialization, testing, debugging and manipulating dates, emails, command line arguments, and much more!  
 
-EXCEPTION HANDLING:  
+
+###STRING FORMATTING:  
+To combine strings and non-strings, you can convert the non-strings to strings and add them to each other.  
+String formatting provides a more powerful way to embed non-strings within strings.  
+String formatting uses a string's format method to substitute a number of arguments in the string.  
+```python
+# string formatting
+nums = [4, 5, 6]
+msg = "Numbers: {0} {1} {2}". format(nums[0], nums[1], nums[2])
+print(msg)
+# Numbers: 4 5 6
+```
+Each argument of the format function is placed in the string at the corresponding position, which is determined using the curly braces { }.  
+String formatting can also be done with named arguments.  
+```python
+a = "{x}, {y}".format(x=5, y=12)
+print(a)
+# 5, 12
+```
+Another way of formatting is the f method  
+```python
+name = "Eric"
+age = 74
+f"Hello, {name}. You are {age}."
+# 'Hello, Eric. You are 74.'
+```
+###EXCEPTION HANDLING:  
 Exceptions occur when something goes wrong, due to incorrect code or input. When an exception occurs, the program immediately stops.  
 Different exceptions are raised for different reasons. Common exceptions:   
 ZeroDivisionError (trying to divide something by 0);  
@@ -622,6 +872,8 @@ NameError: an unknown (undefined) variable is used;
 SyntaxError: the code can't be parsed properly;  
 TypeError: a function is called on a value of an inappropriate type;  
 ValueError: a function is called on a value of the correct type, but with an inappropriate value.  
+KeyError: indexing a key that isn't part of the dictionary.   
+MemoryError: trying to create a list in a very extensive range. 
 Python has several other built-in exceptions, such as OSError.  
 Third-party libraries also often define their own exceptions.  
 
@@ -743,7 +995,7 @@ except:
 An error occurred  
 ZeroDivisionError: division by zero  
 
-ASSERTION:  
+###ASSERTION:  
 An assertion is a sanity-check that you can turn on or turn off when you have finished testing the program.  
 An expression is tested, and if the result comes up false, an exception is raised.  
 Assertions are carried out through use of the assert statement.  
@@ -769,8 +1021,8 @@ assert (temp >= 0), "Colder than absolute zero!"
 ```
 AssertionError: Colder than absolute zero!  
 
-FILES: 
-Reading files:   
+###FILES: 
+####Reading files:   
 You can use Python to read and write the contents of files.  
 Text files are the easiest to manipulate. Before a file can be edited, it must be opened, using the open function.  
 The argument of the open function is the path to the file.  
@@ -867,7 +1119,7 @@ Line 3 text
 
 In this output, the lines are separated by blank lines, as the print function automatically adds a new line at the end of its output.  
 
-Writing files:  
+####Writing files:  
 To write to files you use the write method, which writes a string to the file.  
 The "w" mode will create a file, if it does not already exist.  
 
