@@ -73,13 +73,27 @@ print("Hello" + ", " + "World" + "!") # Hello, World!
 ##STRINGS:  
 ```python
 txt = "Hello World!"
-x = txt[0] # H
-y = txt[2:5] # llo
-z = txt.strip() # remove any whitespace at beginning or end
-t = txt.upper() # convert to UPPERCASE
-t = txt.lower() # convert to lowercase
-u = txt.replace("H", "J") # Replace the character H with a J
+a = txt[0] # H
+b = txt[2:5] # llo
+c = txt.strip() # remove any whitespace at beginning or end
+d = txt.upper() # convert to UPPERCASE
+e = txt.lower() # convert to lowercase
+f = txt.replace("H", "J") # Replace the character H with a J
+g = txt.startswith("Hello") # determine if there is a substring at the start
+h = txt.endswith("World!") # determine if there is a substring at the end
+i = print(", ".join(["bacon", "eggs", "beans"])) # join list of strings with another string as separator
+j = print("bacon eggs beans".split(", ")) # turning a string with a certain separator into a list
+
 ```
+##NUMBERS:
+```python
+print(min(1, 2, 3, 4, 0, 2, 1)) # finds minimum of some numbers or a list
+print(max([1, 4, 9, 2, 5, 6, 8])) # finds the maximum of some numbers or a list
+print(abs(-99)) # finds the distance of a number from zero (its absolute value)
+print(round(5.3768, 2)) # rounds a number to a certain number of decimal places (num, decimal places)
+print(sum([1, 2, 3, 4, 5])) # finds the total of a list
+```
+
 ###NONE:  
 The None object is used to represent the absence of a value.  
 It is similar to null in other programming languages.  
@@ -563,12 +577,35 @@ You don't need to call list on the range object when it is used in a for loop, b
 ```python
 for i in range(5):
   print("hello!")
+
+# hello!  
+# hello!  
+# hello!  
+# hello!  
+# hello! 
 ```
-hello!  
-hello!  
-hello!  
-hello!  
-hello!  
+###LIST FUNCTIONS:
+Often used in conditional statements, all and any take a list as an argument, and return True if all or any (respectively) of their arguments evaluate to True (and False otherwise).  
+The function enumerate can be used to iterate through the values and indices of a list simultaneously.  
+```python
+nums = [55, 44, 33, 22, 11]
+
+if all([i > 5 for i in nums]):
+   print("All larger than 5")
+
+if any([i % 2 == 0 for i in nums]):
+   print("At least one is even")
+
+for v in enumerate(nums):
+   print(v)
+# All larger than 5
+# At least one is even
+# (0, 55)
+# (1, 44)
+# (2, 33)
+# (3, 22)
+# (4, 11)
+```
 
 ###DICTIONARIES:  
 Dictionaries are data structures used to map arbitrary keys to values.  
