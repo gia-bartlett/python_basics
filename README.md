@@ -1,4 +1,4 @@
-#PYTHON BASICS:  
+# PYTHON BASICS:  
 https://www.sololearn.com/Play/Python  
 
 
@@ -31,7 +31,7 @@ shout("halp")
 # prints halp!
 ```
 
-###Data Types:
+### Data Types:
 - strings are used for simple text (str) (putting numbers in quotes will make them str)
 - integers are whole numbers (int)
 - floats are decimal numbers (float)
@@ -60,8 +60,8 @@ Be careful not to confuse assignment (=) with comparison (==).
 Num1 is(=) 7  
 Num2 is equal to(==) 3  
 Python's order of operations is the same as that of normal mathematics:  
-parentheses first, then exponentiation, then multiplication/division, and then addition/subtraction.
-
+parentheses first, then exponentiation, then multiplication/division, and then addition/subtraction.  
+% Another way to say it is “X divided by Y with J remaining.” The result of % is the J part, or the remaining part.
 ```python
 print('Hello world!')  # Hello world!
 print(2+2)  # 4
@@ -70,7 +70,7 @@ print("Hello" + "World") # HelloWorld
 print("Hello" + ", " + "World" + "!") # Hello, World!
 ```
 
-##STRINGS:  
+## STRINGS:  
 ```python
 txt = "Hello World!"
 a = txt[0] # H
@@ -85,7 +85,7 @@ i = print(", ".join(["bacon", "eggs", "beans"])) # join list of strings with ano
 j = print("bacon eggs beans".split(", ")) # turning a string with a certain separator into a list
 
 ```
-##NUMBERS:
+## NUMBERS:
 ```python
 print(min(1, 2, 3, 4, 0, 2, 1)) # finds minimum of some numbers or a list
 print(max([1, 4, 9, 2, 5, 6, 8])) # finds the maximum of some numbers or a list
@@ -94,7 +94,7 @@ print(round(5.3768, 2)) # rounds a number to a certain number of decimal places 
 print(sum([1, 2, 3, 4, 5])) # finds the total of a list
 ```
 
-###NONE:  
+### NONE:  
 The None object is used to represent the absence of a value.  
 It is similar to null in other programming languages.  
 Like other "empty" values, such as 0, [] and the empty string, it is False when converted to a Boolean variable.
@@ -117,7 +117,7 @@ print(var)
 # None
 ```
 
-###VARIABLES:  
+### VARIABLES:  
 A variable allows you to store a value by assigning it to a name, which can be used to refer to the value later in the program.  
 Variables can use letter, numbers, and underscores but they cannot start with numbers 
 
@@ -131,10 +131,10 @@ num3 = input("Enter a number: ") # create a variable with user input
 7 > 5 # True
 ```
 
-##STATEMENTS:
+## STATEMENTS:
 Python uses indentation (white space at the beginning of a line) to delimit blocks of code. In Python indentation is mandatory; programs won't work without it.  
 
-###IF:  
+### IF:  
 You can use if statements to run code if a certain condition holds.  
 If an expression evaluates to True, some statements are carried out.  Otherwise, they aren't carried out.
 
@@ -155,7 +155,7 @@ if num > 5:
 # Bigger than 5
 # Between 5 and 7
 ```
-###ELSE:  
+### ELSE:  
 An else statement follows an if statement, and contains code that is called when the if statement evaluates to False.  
 ```python
 x = 4
@@ -180,14 +180,14 @@ else:
       print("Number isn't 5, 11 or 7")
 # Number is 7
 ```
-###BOOLEAN LOGIC:  
+### BOOLEAN LOGIC:  
 Boolean logic is used to make more complicated conditions for if statements that rely on more than one condition.  
 Python's Boolean operators are and, or, and not.  
-####AND  
+####A ND  
 The and operator takes two arguments, and evaluates as True if, and only if, both of its arguments are True. Otherwise, it evaluates to False.  
-####OR   
+#### OR   
 The or operator also takes two arguments. It evaluates to True if either (or both) of its arguments are True, and False if both arguments are False.  
-####NOT  
+#### NOT  
 Unlike other operators we've seen so far, not only takes one argument, and inverts it.
 The result of not True is False, and not False goes to True.
 ```python
@@ -205,7 +205,7 @@ It is an extension of the mathematical idea of order of operations (multiplicati
 
 <img src="https://api.sololearn.com/DownloadFile?id=3515">  
 
-###WHILE LOOPS:  
+### WHILE LOOPS:  
 An if statement is run once if its condition evaluates to True, and never if it evaluates to False.  
 A while statement is similar, except that it can be run more than once.  
 The statements inside it are repeatedly executed, as long as the condition holds.  
@@ -234,7 +234,7 @@ while 1==1:
 You can stop the program's execution by using the Ctrl-C shortcut or by closing the program.  
 To end a while loop prematurely, the break statement can be used.  
 When encountered inside a loop, the break statement causes the loop to finish immediately.  
-####BREAK:  
+#### BREAK:  
 Using the break statement outside of a loop causes an error.  
 ```python
 i = 0
@@ -255,7 +255,7 @@ print("Finished")
 Breaking  
 Finished  
 
-####CONTINUE:  
+#### CONTINUE:  
 Another statement that can be used within loops is continue.  
 Unlike break, continue jumps back to the top of the loop, rather than stopping it.  
 Basically, the continue statement stops the current iteration and continues with the next one.  
@@ -281,7 +281,7 @@ Skipping 2
 Breaking  
 Finished  
 
-###LISTS:  
+### LISTS:  
 Lists are another type of object in Python.  
 They are used to store an indexed list of items.  
 A list is created using square brackets with commas separating items.  
@@ -491,7 +491,7 @@ print(list[list[4]])
 4  
 8 (this one takes the inside answer and the index for the first list)  
 
-###SLICING:  
+### SLICING:  
 List slices provide a more advanced way of retrieving values from a list.  
 Basic list slicing involves indexing a list with two colon-separated integers.  
 This returns a new list containing all the values in the old list between the indices.  
@@ -538,7 +538,7 @@ Using [::-1] as a slice is a common and idiomatic way to reverse a list.
 [1, 4, 9, 16, 25, 36, 49, 64]  
 print(list[starting point: end point: step])  
 
-####LIST COMPREHENSIONS:  
+#### LIST COMPREHENSIONS:  
 List comprehensions are a useful way of quickly creating lists whose contents obey a simple rule.  
 ```python
 # a list comprehension
@@ -557,7 +557,7 @@ print(evens)
 Trying to create a list in a very extensive range will result in a MemoryError.  
 This issue can be solved by generators.  
 
-###FOR LOOPS:  
+### FOR LOOPS:  
 Iterating through a list using a while loop requires quite a lot of code, so Python provides the for loop as a shortcut that accomplishes the same thing.  
 
 ```python
@@ -584,7 +584,7 @@ for i in range(5):
 # hello!  
 # hello! 
 ```
-###LIST FUNCTIONS:
+### LIST FUNCTIONS:
 Often used in conditional statements, all and any take a list as an argument, and return True if all or any (respectively) of their arguments evaluate to True (and False otherwise).  
 The function enumerate can be used to iterate through the values and indices of a list simultaneously.  
 ```python
@@ -607,7 +607,7 @@ for v in enumerate(nums):
 # (4, 11)
 ```
 
-###DICTIONARIES:  
+### DICTIONARIES:  
 Dictionaries are data structures used to map arbitrary keys to values.  
 Lists can be thought of as dictionaries with integer keys within a certain range.  
 Dictionaries can be indexed in the same way as lists, using square brackets containing keys.  
@@ -673,7 +673,7 @@ True
 False  
 True  
 
-####GET:  
+#### GET:  
 A useful dictionary method is get. It does the same thing as indexing,  
 but if the key is not found in the dictionary it returns another specified value instead ('None', by default).  
 
@@ -692,7 +692,7 @@ print(pairs.get(12345, "not in dictionary"))
 None  
 not in dictionary  
 
-###TUPLES:  
+### TUPLES:  
 Tuples are very similar to lists, except that they are immutable (they cannot be changed).  
 Also, they are created using parentheses, rather than square brackets.  
 You can access the values in the tuple with their index, just as you can with lists;  
@@ -723,7 +723,7 @@ Tuples are faster than lists, but they cannot be changed.
 [-1] refers to last item (when reading right to left)  
 [2:5] starts at index 2 (included) end at index 5 (not included)  
  
-###FUNCTIONS:  
+### FUNCTIONS:  
 Code reuse is a very important part of programming in any language.  
 Increasing code size makes it harder to maintain.  
 For a large programming project to be successful, it is essential to abide by the Don't Repeat Yourself, or DRY, principle.  
